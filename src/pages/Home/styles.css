@@ -1,0 +1,115 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centralbox{
+  width: 350px;
+  height: 200px;
+  background-color: #30363d;
+  border: 2px solid #464747;
+  border-radius: 5px;
+}
+
+
+.text-input{
+  width: 330px;
+	margin: 8px;
+  padding: 3px;
+  font-size: 14px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+.text-input:hover{
+  background-color: rgb(211, 207, 207);
+}
+
+.text-input:focus{
+  outline:none;
+}
+
+.label{
+  margin: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btncontainer{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.registerbtn {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+  margin-left: 10px;
+}
+.registerbtn:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+.registerbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.serachbtn {
+	box-shadow: 0px 10px 14px -7px #7d7d10;
+	background:linear-gradient(to bottom, #c4c24b 5%, #dcde49 100%);
+	background-color:#c4c24b;
+	border-radius:4px;
+	border:1px solid #c1c413;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b4bd0b;
+}
+.serachbtn:hover {
+	background:linear-gradient(to bottom, #dcde49 5%, #c4c24b 100%);
+	background-color:#dcde49;
+}
+ .serachbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.modal-register{
+	width: 400px;
+  height: 300px;
+	background-color: black;
+}
+
+.title{
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+ 

@@ -1,0 +1,53 @@
+/* .input{
+  background-color: red;
+}
+
+.textAddModal{
+  background-color: blue;
+}
+
+.btnAdd{
+  background-color: cyan;
+} */
+
+.input{
+  width: 330px;
+  padding: 5px;
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 0px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+}
+
+.input:hover{
+  background-color: rgb(211, 207, 207);
+}
+
+.input:focus{
+  outline:none;
+}
+
+.textAddModal{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnAdd{
+  background-color: green;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.titleAdd{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
