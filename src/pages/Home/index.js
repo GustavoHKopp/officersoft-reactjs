@@ -5,7 +5,6 @@ import { RegisterModal } from '../../components/modal/RegisterModal'
 import { getUser } from '../../services/users'
 
 
-
 const Home = () => {
   const [cpf, setCpf] = useState('')
   const [modalIsVisible, setmodalIsVisible] = useState(false)
