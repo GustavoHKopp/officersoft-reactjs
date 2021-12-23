@@ -1,8 +1,9 @@
 import Modal from "react-modal";
 import {Form, Input, Button } from 'antd'
-import { MaskedInput } from "../maskInput";
+import { CpfMaskedInput } from "../../maskInput/cpfMask";
 import { useState } from "react";
 import './styles.css'
+import { RgMaskedInput } from "../../maskInput/rgMask";
 
 const customStyles = {
   content: {
@@ -17,12 +18,9 @@ const customStyles = {
   }
 }
 
-export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
+const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
   const [cpf, setCpf] = useState('')
-
-  const handleOnSubmit = () => {
-
-  }
+  const [rg, setRg] = useState('')
 
   const onFinish = (values) => {
     handleRequest(values)
@@ -55,12 +53,12 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
       >
       <Form.Item
         label="Nome"
-        name="name"
+        name="nome"
         className="textAddModal"
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -68,17 +66,16 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
       </Form.Item><br />
       <Form.Item
         label="CPF"
-        name="cpf"
+        name="CPF"
         className="textAddModal"
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
-        <MaskedInput 
-        
+        <CpfMaskedInput 
       value={cpf}
       onChange={(e) => setCpf(e.target.value)}
       className='input'/>
@@ -90,7 +87,7 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -103,7 +100,7 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -116,7 +113,7 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -129,7 +126,7 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -142,7 +139,7 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -150,12 +147,12 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
       </Form.Item><br />
       <Form.Item
         label="UF"
-        name="uf"
+        name="UF"
       className="textAddModal"
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
@@ -163,16 +160,19 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
       </Form.Item><br />
       <Form.Item
         label="RG"
-        name="rg"
+        name="RG"
       className="textAddModal"
         rules={[
           {
             required: true,
-            message: ""
+            message: ".,"
           }
         ]}
         >
-        <Input className="input" />
+        <RgMaskedInput 
+        value={rg}
+        onChange={(e) => setRg(e.target.value)}
+        className='input'/>
       </Form.Item><br />
       <Form.Item
         wrapperCol={{
@@ -187,3 +187,5 @@ export const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest})
     </Form>
 </Modal>
 }
+
+export { RegisterModal }
