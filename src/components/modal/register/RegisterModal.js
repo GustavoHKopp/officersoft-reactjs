@@ -58,7 +58,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -71,7 +71,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -87,7 +87,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -100,7 +100,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -113,7 +113,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -126,7 +126,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -139,7 +139,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -152,7 +152,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: ""
           }
         ]}
         >
@@ -165,7 +165,7 @@ const RegisterModal = ({handleCloseModal, modalIsVisible, handleRequest}) => {
         rules={[
           {
             required: true,
-            message: ".,"
+            message: "Insira Todos os Dados"
           }
         ]}
         >

@@ -6,6 +6,11 @@ import { addUser, getUser } from '../../services/users'
 import { UserModal } from '../../components/modal/serach/SearchUserModal'
 
 
+const userAdmin = {
+  name: 'admin',
+  password: 'admin'
+}
+
 const Home = () => {
   const [CPF, setCpf] = useState('')
   const [modalIsVisible, setmodalIsVisible] = useState(false)
@@ -13,6 +18,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [peoples, setPeoples] = useState([])
   const [people, setPeople] = useState({})
+  const [userLoggade, setUserLoggade] = useState(false)
 
   const openModal = () => {
     setmodalIsVisible(true)
@@ -49,14 +55,44 @@ const Home = () => {
 const searchUser = async() => {
   setUserModalIsVisible(true)
   let {data} = await getUser(CPF)
-  console.log(data[0])
   setPeople(data[0])
+}
+
+const checkUser = () =>{
+  const name = document.getElementById('nameInput').value
+  const password = document.getElementById('senhaInput').value
+
+  if(name === userAdmin.name && password === userAdmin.password){
+    setUserLoggade(true)
+  } else {
+    setUserLoggade(false)
+  }
 }
 
 if(isLoading){
   <h2>Loading...</h2>
 }
 
+if(userLoggade === false){
+  return( <>
+  <div className="alertContainer">
+  </div>
+    <div className="loginAreaContainer">
+      <div className="loginArea">
+        <div className="title-login">
+        <h1 className="loginAreaTitle">LOGIN</h1>
+        </div>
+        <div className="inputArea">
+        <label className="loginAreaText">Nome</label><br />
+        <input type="text" id="nameInput" className="loginAreaInput" placeholder="digite seu nome"></input><br />
+        <label className="loginAreaText">Senha</label><br />
+        <input type="password" id="senhaInput" className="loginAreaInput" placeholder="digite sua senha"></input><br />
+        <button className="loginAreaButton" onClick={checkUser}>ENTRAR</button>
+        </div>
+      </div>
+    </div>
+    </>)
+}
   return <>
   <div className="container">
     <div className="centralbox">
@@ -70,6 +106,7 @@ if(isLoading){
       /><br />
       <div className='btncontainer'>
       <button className='serachbtn' onClick={searchUser}>Pesquisar</button>
+      {people.name ?  
       <UserModal 
       handleCloseModal={handleCloseUserModal} 
       modalIsVisible={userModalIsVisible}
@@ -79,7 +116,7 @@ if(isLoading){
       endereco={people.endereco} 
       bairro={people.bairro} 
       UF={people.UF} 
-      />
+      /> : console.log()}
       <button className='registerbtn' onClick={openModal}>Cadastrar</button>
       <RegisterModal 
       handleCloseModal={handleCloseModal} 

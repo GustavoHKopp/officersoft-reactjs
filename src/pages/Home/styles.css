@@ -113,4 +113,69 @@
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 }
- 
+
+.loginAreaContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginArea{
+  width: 680px;
+  height: 411px;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+	background-color: #30363d;
+	border: 2px solid #464747;
+	border-radius: 8px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginAreaTitle{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-align: center;
+	font-size: 80px;
+}
+
+.loginAreaText{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.loginAreaInput{
+  width: 180px;
+  height: 30px;
+  text-align: center;
+}
+
+.loginAreaButton{
+  width: 190px;
+  height: 40px;
+  padding: 10px;
+  background-color: green;
+  border: none;
+	border-radius: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.loginAreaButton:hover{
+ background-color: #015e01;
+}
+
+.inputArea{
+  text-align: center;
+  margin: 80px;
+}
+
+.title-login{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 30px;
+}
